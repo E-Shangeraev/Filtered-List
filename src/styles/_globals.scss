@@ -117,13 +117,8 @@ input:-webkit-autofill:active {
   margin: 0 auto;
 }
 
-@media (max-width: 1280px) {
-  section {
-    padding: 0 30px;
-  }
-}
-@media (max-width: 640px) {
-  section {
-    padding: 0 15px;
+@media (max-width: 1366px) {
+  .wrapper {
+    max-width: 1000px;
   }
 }
