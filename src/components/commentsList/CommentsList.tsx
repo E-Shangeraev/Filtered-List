@@ -1,16 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { useAppSelector, useAppDispatch } from '../../app/hooks';
+import { getComments, selectComments } from './commentsListSlice';
 import Comment, { CommentProps } from '../comment/Comment';
 
-type CommentsState = CommentProps[];
+export type Comments = CommentProps[];
 
 const CommentsList: React.FC = () => {
-  const [comments, setComments] = useState<CommentsState>([]);
+  const dispatch = useAppDispatch();
+  const comments = useAppSelector(selectComments);
 
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/comments?_limit=20')
-      .then(response => response.json())
-      .then(setComments);
-  }, []);
+    dispatch(getComments(20));
+  }, [dispatch]);
 
   return (
     <div style={{ backgroundColor: '#e5e5e5' }}>
