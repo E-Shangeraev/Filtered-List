@@ -1,0 +1,14 @@
+{
+  "trailingComma": "all",
+  "singleQuote": true,
+  "rules": {
+    "prettier/prettier": [
+      true,
+      {
+        "singleQuote": true,
+        "tabWidth": 4,
+        "trailingComma": "all"
+      }
+    ]
+  }
+}

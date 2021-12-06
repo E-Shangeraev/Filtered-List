@@ -1,0 +1,9 @@
+node_modules/
+config/config-overrides.js
+src/index.html
+**/node_modules/*
+*.png
+*.jpeg
+*.jpg
+*.svg
+*.html

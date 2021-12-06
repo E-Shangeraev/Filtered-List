@@ -1,18 +1,15 @@
 import React from 'react';
-import Header from './components/header/Header';
-import SearchPanel from './components/searchPanel/SearchPanel';
-import CommentsList from './components/commentsList/CommentsList';
+import { ThemeProvider } from 'styled-components';
+import { LayoutContainer } from 'app/features/Layout';
+import theme, { GlobalStyle } from './theme';
 
-import './styles/style.scss';
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Header />
-      <SearchPanel />
-      <CommentsList />
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <LayoutContainer />
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
